@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
     
     <EditText
-        android:id="@+id/cost_of_service"
+        android:id="@+id/tamanho_gorjeta"
         android:layout_width="170dp"
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
@@ -18,12 +18,43 @@
         />
 
     <TextView
-        android:id="@+id/service_question"
+        android:id="@+id/pergunta_tamanho"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Como foi o serviço?"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cost_of_service"
+        app:layout_constraintTop_toBottomOf="@id/tamanho_gorjeta"
         />
+
+    <RadioGroup
+        android:id="@+id/opcoes_gorjeta"
+        android:checkedButton="@id/opcao_vinte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pergunta_tamanho">
+
+            <RadioButton
+                android:id="@+id/opcao_vinte"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Incrível (20%)"
+                />
+            <RadioButton
+                android:id="@+id/opcao_dezoito"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bom (18%)"
+                />
+            <RadioButton
+                android:id="@+id/opcao_quinze"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ok (15%)"
+                />
+
+
+    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
