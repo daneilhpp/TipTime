@@ -12,16 +12,16 @@
         android:layout_width="170dp"
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
-        android:hint="Tamanho da Gorjeta"
-        app:layout_constrainedStart_toStartOf="parent"
-        app:layout_constrainedTop_toTopOf="parent"
+        android:hint="@string/custo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         />
 
     <TextView
         android:id="@+id/pergunta_tamanho"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Como foi o serviço?"
+        android:text="@string/como_foi"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tamanho_gorjeta"
         />
@@ -39,31 +39,50 @@
                 android:id="@+id/opcao_vinte"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Incrível (20%)"
+                android:text="@string/incrivel"
                 />
             <RadioButton
                 android:id="@+id/opcao_dezoito"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Bom (18%)"
+                android:text="@string/bom"
                 />
             <RadioButton
                 android:id="@+id/opcao_quinze"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Ok (15%)"
+                android:text="@string/ok"
                 />
     </RadioGroup>
 
     <Switch
         android:id="@+id/arredondar"
-        android:text="Arredondar Gorjeta"
+        android:text="@string/arredondar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:checked="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/opcoes_gorjeta"
+        tools:ignore="UseSwitchCompatOrMaterialXml"
+        />
+    
+    <Button
+        android:id="@+id/calcular"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/calcular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/arredondar"
+        />
+    <TextView
+        android:id="@+id/resultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/quantidade"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/calcular"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
